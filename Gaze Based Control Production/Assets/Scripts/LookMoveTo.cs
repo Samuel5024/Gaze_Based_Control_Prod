@@ -4,10 +4,15 @@ using System.Collections;
 public class LookMoveTo : MonoBehaviour
 {
     public GameObject ground;
+    private Transform camera;
+
+    void Start()
+    {
+        camera = Camera.main.transform;
+    }
 
     void Update()
     {
-        Transform camera = Camera.main.transform;
         Ray ray;
         RaycastHit[] hits;
         GameObject hitObject;     
@@ -28,4 +33,5 @@ public class LookMoveTo : MonoBehaviour
             }
         }
     }
+
 }
